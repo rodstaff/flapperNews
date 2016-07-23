@@ -22,10 +22,22 @@ function($scope){
   // $scope.addPost = function(){
   //   $scope.posts.push({title: 'A new post!', upvotes: 0});
   // };
+
   // $scope.title below enables custom titles from html input
   $scope.addPost = function(){
-  $scope.posts.push({title: $scope.title, upvotes: 0});
-  $scope.title = '';
+  	//if statement below prevents user from inputing blank title
+    if(!$scope.title || $scope.title === '') { return; }
+    $scope.posts.push({
+      title: $scope.title,
+      link: $scope.link,
+      upvotes: 0
+    });
+    $scope.title = '';
+    $scope.link = '';
+  };
+
+  $scope.incrementUpvotes = function(post) {
+    post.upvotes += 1;
   };
 
 }]);
