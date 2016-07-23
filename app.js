@@ -19,8 +19,13 @@ function($scope){
     {title: 'post 5', upvotes: 4}
   ];
 
+  // $scope.addPost = function(){
+  //   $scope.posts.push({title: 'A new post!', upvotes: 0});
+  // };
+  // $scope.title below enables custom titles from html input
   $scope.addPost = function(){
-    $scope.posts.push({title: 'A new post!', upvotes: 0});
+  $scope.posts.push({title: $scope.title, upvotes: 0});
+  $scope.title = '';
   };
 
 }]);
