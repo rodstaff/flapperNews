@@ -4,7 +4,9 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
     <script src="app.js"></script>
+
     <style> .glyphicon-thumbs-up { cursor:pointer } </style>
+    
   </head>
   <body ng-app="flapperNews" ng-controller="MainCtrl">
     <div>
@@ -21,7 +23,7 @@
           <span class="glyphicon glyphicon-thumbs-up" ng-click="incrementUpvotes(post)">
             {{post.upvotes}}
           </span>
-          <span style="font-size:20px; margin-left:10px;">
+          <span style="font-size:20px; margin-left:30px;">
             <a ng-show="post.link" href="{{post.link}}">
               {{post.title}}
             </a>
